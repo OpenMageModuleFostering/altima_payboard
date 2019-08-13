@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Altima Payboard Conversion Optimisation Extension
+ *
+ * Altima web systems.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is available through the world-wide-web at this URL:
+ * http://blog.altima.net.au/lookbook-magento-extension/lookbook-professional-licence/
+ *
+ * @category   Altima
+ * @package    Altima_Payboard
+ * @author     Altima Web Systems http://altimawebsystems.com/
+ * @license    http://blog.altima.net.au/lookbook-magento-extension/lookbook-professional-licence/
+ * @email      support@altima.net.au
+ * @copyright  Copyright (c) 2012 Altima Web Systems (http://altimawebsystems.com/)
+ */
+-->
+<layout>
+    <adminhtml_payboard_index>
+        <reference name="content">
+            <block type="adminhtml/template" name="payboard" template="payboard/payboardform.phtml" />
+        </reference>
+    </adminhtml_payboard_index>
+</layout>

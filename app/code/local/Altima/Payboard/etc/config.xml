@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Altima Payboard Conversion Optimisation Extension
+ *
+ * Altima web systems.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is available through the world-wide-web at this URL:
+ * http://blog.altima.net.au/lookbook-magento-extension/lookbook-professional-licence/
+ *
+ * @category   Altima
+ * @package    Altima_Payboard
+ * @author     Altima Web Systems http://altimawebsystems.com/
+ * @license    http://blog.altima.net.au/lookbook-magento-extension/lookbook-professional-licence/
+ * @email      support@altima.net.au
+ * @copyright  Copyright (c) 2012 Altima Web Systems (http://altimawebsystems.com/)
+ */
+-->
+<config>
+    <modules>
+        <Altima_Payboard>
+            <version>1.0.0</version>
+        </Altima_Payboard>
+    </modules>
+    <global>
+        <models>
+            <altima_payboard>
+                <class>Altima_Payboard_Model</class>
+            </altima_payboard>
+        </models>
+        <extraconfig />
+        <blocks>
+            <altima_payboard>
+                <class>Altima_Payboard_Block</class>
+            </altima_payboard>
+        </blocks>
+        <resources>
+            <altima_payboard_setup>
+                <setup>
+                    <module>Altima_Payboard</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </altima_payboard_setup>
+            <altima_payboard_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </altima_payboard_write>
+            <altima_payboard_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </altima_payboard_read>
+        </resources>
+        <helpers>
+            <altima_payboard>
+                <class>Altima_Payboard_Helper</class>
+            </altima_payboard>
+        </helpers>
+        <events>
+            <controller_action_layout_render_before>
+                <observers>
+                    <payboard_layout_generate_observer>
+                        <type>singleton</type>
+                        <class>altima_payboard/layout_generate_observer</class>
+                        <method>includeJavascripts</method>
+                    </payboard_layout_generate_observer>
+                </observers>
+            </controller_action_layout_render_before>
+        </events>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <altima_payboard>
+                    <file>altima_payboard.xml</file>
+                </altima_payboard>
+            </updates>
+        </layout>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Altima_Payboard before="Mage_Adminhtml">Altima_Payboard_Adminhtml</Altima_Payboard>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

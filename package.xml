@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>Altima_Payboard</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL 3.0)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This is official Payboard extension for Magento eCommerce that makes installation of Payboard to Magento store a breeze.</summary>
+    <description>Payboard is an innovative service that increases conversion of your online store via intelligent self-learning navigation elements (boosters). Boosters lead your website visitors to the most appropriate next page. Payboard decreases bounce rate and drives sales!&#xD;
+This is the official Payboard extension for Magento eCommerce that makes installation of Payboard on Magento a breeze.&#xD;
+</description>
+    <notes>Minor changes and improvements</notes>
+    <authors><author><name>Andrey</name><user>altimaweb</user><email>andrey.stepin@altima.com.ua</email></author></authors>
+    <date>2015-01-26</date>
+    <time>13:20:11</time>
+    <contents><target name="magelocal"><dir name="Altima"><dir name="Payboard"><dir name="Block"><dir name="Adminhtml"><file name="Payboard.php" hash="90733456e55ecb65d79550414824d426"/></dir><file name="Payboardjs.php" hash="3faefdac8d06836905141b964c08f2fb"/></dir><dir name="Helper"><file name="Data.php" hash="8f31451727f487a768e66bfe306016b5"/></dir><dir name="Model"><dir name="Layout"><dir name="Generate"><file name="Observer.php" hash="b0a80fa857b9a519df4187412bc6f78c"/></dir></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="PayboardController.php" hash="4fef67b350fa8d3c97a1859dac81de56"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="76013e366939e6c8590323e7ee5de1fe"/><file name="config.xml" hash="5cd291071ccb25703eae4179ed3cd739"/><file name="system.xml" hash="dd3101dc05c0f8da62c0f60c8f7b0825"/></dir><dir name="sql"><dir name="altima_payboard_setup"><file name="install-1.0.0.php" hash="0fe144f2df5377f38a502dd8254f82dd"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="altima_payboard.xml" hash="43868876c0abe9c04f7c5c224c757b0f"/></dir><dir name="template"><dir name="payboard"><file name="payboardform.phtml" hash="3900b7ac73206c51e06bd52ea562354d"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Altima_Payboard.xml" hash="2e244ed8dad699e4e4de8f1670841019"/></dir></target><target name="magemedia"><dir name="payboard"><file name="PrivacyPolicy.txt" hash="09897179412c130ec3097c0d745fbb24"/><file name="img.jpg" hash="aaf9ecc92137459b24c7dfdfbddd5b14"/><file name="tos.txt" hash="613ae2b51d48e4d8ec8322c546649c70"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.6</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.6.0.0</min><max>1.9.0.1</max></package></required></dependencies>
+</package>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Altima Payboard Conversion Optimisation Extension
+ *
+ * Altima web systems.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is available through the world-wide-web at this URL:
+ * http://blog.altima.net.au/lookbook-magento-extension/lookbook-professional-licence/
+ *
+ * @category   Altima
+ * @package    Altima_Payboard
+ * @author     Altima Web Systems http://altimawebsystems.com/
+ * @license    http://blog.altima.net.au/lookbook-magento-extension/lookbook-professional-licence/
+ * @email      support@altima.net.au
+ * @copyright  Copyright (c) 2012 Altima Web Systems (http://altimawebsystems.com/)
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <payboard translate="title" module="altima_payboard">
+                                        <title>Payboard Conversion Optimisation</title>
+                                    </payboard>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <system>
+            <children>
+                <payboard translate="title" module="altima_payboard">
+                    <title>Payboard Conversion Optimisation</title>
+                    <sort_order>10</sort_order>
+                    <action>adminhtml/payboard</action>
+                </payboard>
+            </children>
+        </system>
+    </menu>
+</config>

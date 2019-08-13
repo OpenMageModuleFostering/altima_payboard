@@ -1,0 +1,43 @@
+
+<div class="content-header">
+    <table cellspacing="0" class="grid-header">
+        <tr>
+            <td><h3><?= $this->__('Payboard Settings') ?></h3></td>
+            <td class="a-right">
+                <button onclick="editForm.submit()" class="scalable save" type="button"><span>Save Changes</span></button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="entry-edit">
+    <form id="edit_form" name="edit_form" method="post" action="<?= $this->getUrl('*/*/post') ?>">
+        <input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
+        <h4 class="icon-head head-edit-form fieldset-legend"><?= $this->__('Payboard API key') ?></h4>
+        <fieldset id="my-fieldset">
+            <table cellspacing="0" class="form-list">
+                <tr>
+                    <td class="label"><?= $this->__('Insert your Public API key here') ?> <span class="required">*</span></td>
+                    <td class="input-ele"><input class="input-text required-entry" name="api_key" size="50" value="<?= Mage::getStoreConfig('payboard/general/apikey'); ?>" /></td>
+                </tr>
+                <tr><td></td>
+                    <?php $img_url = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'payboard/img.jpg'; ?>
+                    <td><?= $this->__('You can find your <bold>unique</bold> Public API key in Account section of your Payboard account, click to the <a href="' . $img_url . '" target="_blank">image</a> for tip.') ?></td>
+                </tr>
+            </table>
+                    <?php $tos_url = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'payboard/tos.txt'; ?>
+                    <?php $privacy_url = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'payboard/PrivacyPolicy.txt'; ?>
+            <p><input type="checkbox" class="checkbox" name="accept" value="accept"><?= $this->__(' I accept Payboard Magento Extension <a href="' . $tos_url . '" target="_blank">Terms of Service</a> and <a href="' . $privacy_url . '" target="_blank">Privacy Policy</a></p>') ?>
+        </fieldset>
+    </form>
+</div>
+<script type="text/javascript">
+    var editForm = new varienForm('edit_form');
+</script>
+<div id="apikey_status_message"></div>
+<div style="clear:both;"></div>
+<h3>Need a Payboard account? </h3>
+<p>Visit <a href="http://app.payboard.com/onboarding/index?utm_source=altima#/url">app.paybard.com to sign-up</a>. Free and paid accounts available.</p>  
+<div class="copyright">
+    <p>Official Payboard Magento Extension is developed by <a href="http://shop.altima.net.au/magento-extensions.html?utm_source=Payboard%20Extension%20admin&utm_medium=Link&utm_campaign=Payboard%20Extension">Altima Interactive</a></p>
+</div>
+
