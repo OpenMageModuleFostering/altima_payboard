@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Altima_Payboard",
+    "name": "openmage-module-fostering\/altima_payboard",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL-3.0)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "This is official Payboard extension for Magento eCommerce that makes installation of Payboard to Magento store a breeze.",
     "authors": [
